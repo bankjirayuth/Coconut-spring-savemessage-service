@@ -2,16 +2,14 @@ package com.example.springsavemessageservice.pojo;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 @Data
-@Document(value = "Account")
-public class User {
+public class Inventory {
     @Id
     private String _id;
     private String name;
-    private String password;
-    private ArrayList<Object> items;
+    private ArrayList<Message> inventory;
 }
